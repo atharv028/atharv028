@@ -1,9 +1,7 @@
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px"> I'm Atharv Tare</h1>
 <h3 align="center">git commit -m "Hello, I'm a Mobile Developer"</h3>
 
-<!---
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=atharv028.atharv028)
--->
 
 <p align="left"> <a href="https://twitter.com/atharv_tare0" target="blank"><img src="https://img.shields.io/twitter/follow/atharv_tare0?logo=twitter&style=for-the-badge" alt="atharv_tare0" /></a> </p>
 
