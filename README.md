@@ -1,7 +1,14 @@
 <h1 align="center">Hi <img src="https://gist.githubusercontent.com/arunprakashpj/48aa20057048b46c6f9ba9d114a8b76f/raw/69a9d496f651091a509ea8d9913c4aef5c419afb/Hi.gif" width="30px"> I'm Atharv Tare</h1>
-<h3 align="center">git commit -m "Hello, I'm a Mobile Developer"</h3>
 
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=atharv028.atharv028)
+<div align="center">
+  
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=1500&pause=1000&width=435&center=true&lines=Mobile+Developer;Software+Engineer;Frontend+Expert)](https://git.io/typing-svg)
+
+  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=atharv028.atharv028)
+  
+</div>
+
+
 
 <p align="left"> <a href="https://twitter.com/atharv_tare0" target="blank"><img src="https://img.shields.io/twitter/follow/atharv_tare0?logo=twitter&style=for-the-badge" alt="atharv_tare0" /></a> </p>
 
