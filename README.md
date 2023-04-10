@@ -17,7 +17,7 @@
 
 - 🫶🏻 Open source enthusiast. 
 
-- 🤓 Also know technologies like ⚡ **JAVASCRIPT, TYPESCRIPT, NEXT, VITE, REACT, MongoDB ***.
+- 🤓 Also know technologies like ⚡ **JAVASCRIPT, TYPESCRIPT, NEXT, VITE, REACT, MongoDB** .
 
 - 📝 I am learning about Blockchain Development in my free time.
 
