@@ -12,6 +12,7 @@
 
 <p align="left"> <a href="https://twitter.com/atharv_tare0" target="blank"><img src="https://img.shields.io/twitter/follow/atharv_tare0?logo=twitter&style=for-the-badge" alt="atharv_tare0" /></a> </p>
 
+- 👔 Available for new opportunities.
 
 - 👨‍💻 I am a Dev with Passion for Mobile Development.
 
