@@ -12,6 +12,8 @@
 
 <p align="left"> <a href="https://twitter.com/atharv_tare0" target="blank"><img src="https://img.shields.io/twitter/follow/atharv_tare0?logo=twitter&style=for-the-badge" alt="atharv_tare0" /></a> </p>
 
+- https://get-atharv.dev
+
 - 👔 Available for new opportunities.
 
 - 👨‍💻 I am a Dev with Passion for Mobile Development.
@@ -26,7 +28,7 @@
 
 - ✍🏻 Contributing to multiple <b>open-source</b> projects.
 
-- 📫 How to reach me **atharv.tare.03@gmail.com**
+- 📫 How to reach me **hire.atharv@gmail.com**
 
 - 📄 Know about my work & experiences [My Resume](https://drive.google.com/file/d/1eLBQoXY0IRuhgUMdWMve1EhnLOIEHvaC/view?usp=sharing)
 
