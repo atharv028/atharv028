@@ -15,7 +15,7 @@
       "id": "backend",
       "title": "SDE-1 (Backend)",
       "description": "Backend development, APIs, and system architecture",
-      "filename": "/atharv028/atharv_gen.pdf",
+      "filename": "/atharv_gen.pdf",
       "skills": [
         { "name": "Node.js", "category": "Languages"},
         { "name": "Golang", "category": "Languages"},
