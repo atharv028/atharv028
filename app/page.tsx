@@ -5,6 +5,8 @@ import ProfileCard from "@/components/ProfileCard"
 import SkillsCard from "@/components/SkillsCard"
 import ExperienceSection from "@/components/ExperienceSection"
 import ProjectsSection from "@/components/ProjectsSection"
+import VisitCounter from "@/components/VisitCounter"
+import VisitAnalytics from "@/components/VisitAnalytics"
 import portfolioData from "@/data/portfolio-data.json"
 
 export default function Portfolio() {
@@ -91,6 +93,8 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
+      <VisitCounter />
+      <VisitAnalytics />
     </div>
   )
 }
