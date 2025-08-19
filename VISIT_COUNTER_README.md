@@ -59,13 +59,18 @@ interface VisitData {
 - **Responsive design**: Works on all screen sizes
 - **Theme integration**: Matches the portfolio's dark theme
 - **External tracking**: Integrates with global visitor badge API
+- **Admin-only access**: Visit counter only visible when accessing `/admin` route
+- **Dedicated admin dashboard**: Full admin interface with portfolio content and tracking tools
 
 ## Usage
 
-1. **Automatic Tracking**: Visit counter starts tracking immediately when the page loads
-2. **View Stats**: Click the visit counter to see detailed information
-3. **Analytics**: Click the "Analytics" button for comprehensive statistics
-4. **Data Persistence**: All data persists across browser sessions
+1. **Admin Access**: Visit counter only appears when you navigate to `/admin` in the URL
+2. **Dedicated Admin Route**: `/admin` provides a full admin dashboard with visit tracking
+3. **Automatic Tracking**: Visit counter starts tracking immediately when admin mode is active
+4. **View Stats**: Click the visit counter to see detailed information
+5. **Analytics**: Click the "Analytics" button for comprehensive statistics
+6. **Data Persistence**: All data persists across browser sessions
+7. **Admin Header**: Clear "Portfolio Admin Dashboard" header with admin status indicator
 
 ## Customization
 
