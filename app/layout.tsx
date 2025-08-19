@@ -4,8 +4,8 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Kaustubha Chaturvedi',
-  description: 'Kaustubha Chaturvedi\'s personal website',
+  title: 'Atharv Tare',
+  description: 'Atharv Tare\'s personal website',
   generator: 'v1.0',
 }
 
