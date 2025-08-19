@@ -17,7 +17,7 @@ export default function Portfolio() {
     if (selectedResume) {
       console.log(`Downloading ${selectedResume.filename}`)
       // In a real app, this would download the actual file
-      // window.open(`/resumes/${selectedResume.filename}`, '_blank')
+      window.open(`${selectedResume.filename}`, '_blank')
     }
   }
 
