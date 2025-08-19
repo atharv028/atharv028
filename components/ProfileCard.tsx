@@ -40,7 +40,7 @@ export default function ProfileCard({ profile }: ProfileCardProps) {
       <CardContent className="p-6 text-center">
         <div className="relative w-44 h-44 mx-auto mb-4">
           <Image
-            src="/profile.png"
+            src="/me.webp"
             alt={profile.name}
             fill
             className="rounded-full object-cover border-4 border-slate-700"

@@ -1,241 +1,157 @@
 {
   "profile": {
-    "name": "Kaustubha Chaturvedi",
-    "title": "Software Development Engineer II",
-    "titleShort": "SDE II",
-    "company": "WebCue",
-    "location": "Mohali, India",
-    "email": "kaustubha@example.com",
-    "linkedin": "https://linkedin.com/in/kaustubha-chaturvedi",
-    "github": "https://github.com/kaustubha-chaturvedi",
-    "bio": "Passionate about building scalable backend systems and AI-driven solutions. I architect high-performance applications that solve real-world problems."
+    "name": "Atharv Tare",
+    "title": "Software Development Engineer I",
+    "titleShort": "SDE I",
+    "company": "Phot.AI",
+    "location": "Delhi, India",
+    "email": "hire.atharv@gmail.com",
+    "linkedin": "https://linkedin.com/in/atharv-tare",
+    "github": "https://github.com/atharv028",
+    "bio": "SDE-I with 3 years of experience designing and maintaining scalable backend services while handling 5M user base and 400K MAU, specializing in MongoDB-powered applications and cloud-native deployments."
   },
   "resumes": [
     {
       "id": "backend",
-      "title": "Backend Engineer",
+      "title": "SDE-1 (Backend)",
       "description": "Backend development, APIs, and system architecture",
-      "filename": "Kaustubha_Backend_Resume.pdf",
+      "filename": "atharv_gen.pdf",
       "skills": [
+        { "name": "Node.js", "category": "Languages"},
         { "name": "Golang", "category": "Languages"},
-        { "name": "Python", "category": "Languages"},
-        { "name": "SQL", "category": "Languages"},
         { "name": "JavaScript", "category": "Languages"},
-        { "name": "FastAPI", "category": "Backend"},
-        { "name": "Django", "category": "Backend"},
+        { "name": "TypeScript", "category": "Languages"},
         { "name": "Express.js", "category": "Backend"},
         { "name": "Gin", "category": "Backend"},
+        { "name": "Echo", "category": "Backend"},
+        { "name": "Fiber", "category": "Backend"},
         { "name": "PostgreSQL", "category": "Database"},
         { "name": "MongoDB", "category": "Database"},
         { "name": "Redis", "category": "Database"},
-        { "name": "Elasticsearch", "category": "Database"},
-        { "name": "Docker", "category": "DevOps"},
+        { "name": "Kafka", "category": "Messaging"},
+        { "name": "Prometheus", "category": "Monitoring"},
+        { "name": "Signoz", "category": "Monitoring"},
         { "name": "Kubernetes", "category": "DevOps"},
-        { "name": "AWS", "category": "DevOps"},
-        { "name": "CI/CD", "category": "DevOps"}
-      ]
-    },
-    {
-      "id": "ai-ml",
-      "title": "AI/ML Engineer",
-      "description": "Machine learning, AI systems, and data engineering",
-      "filename": "Kaustubha_AI_ML_Resume.pdf",
-      "skills": [
-        { "name": "Python", "category": "Languages"},
-        { "name": "SQL", "category": "Languages"},
-        { "name": "R", "category": "Languages"},
-        { "name": "Scala", "category": "Languages"},
-        { "name": "TensorFlow", "category": "AI/ML"},
-        { "name": "PyTorch", "category": "AI/ML"},
-        { "name": "Scikit-learn", "category": "AI/ML"},
-        { "name": "Langchain", "category": "AI/ML"},
-        { "name": "Hugging Face", "category": "AI/ML"},
-        { "name": "OpenAI API", "category": "AI/ML"},
-        { "name": "FastAPI", "category": "Backend"},
-        { "name": "Django", "category": "Backend"},
-        { "name": "PostgreSQL", "category": "Database"},
-        { "name": "MongoDB", "category": "Database"},
-        { "name": "Vector DBs", "category": "Database"},
-        { "name": "Docker", "category": "DevOps"},
-        { "name": "MLOps", "category": "DevOps"}
+        { "name": "ArgoCD", "category": "DevOps"},
+        { "name": "AWS", "category": "Cloud"},
+        { "name": "Docker", "category": "DevOps"}
       ]
     }
   ],
   "experiences": [
     {
-      "id": "webcue",
-      "title": "Software Development Engineer II",
-      "company": "WebCue",
-      "location": "Mohali, India",
-      "period": "Jan 2025 - Present",
+      "id": "phot.ai",
+      "title": "Software Development Engineer I",
+      "company": "Phot.AI | Appyhigh",
+      "location": "Delhi, India",
+      "period": "Jan 2022 - Present",
       "type": "Full-time",
-      "technologies": ["Golang", "FastAPI", "NodeJS", "NextJS", "PostgreSQL", "MongoDB"],
+      "technologies": ["Node.js", "Golang", "Express.js", "MongoDB", "Kafka", "Kubernetes", "Prometheus", "Signoz", "ArgoCD", "AWS"],
       "achievements": [
-        "Architected and developed scalable products for ad tracking and revenue analytics, supporting high-throughput data pipelines.",
-        "Led a team of 3+ engineers, collaborating with cross-functional stakeholders to deliver features on time with high code quality.",
-        "Designed and implemented an AI-driven video and image generation system using fine-tuned in-house models and third-party APIs, reducing manual ad creation efforts by 80%."
+        "Designed and maintained highly scalable backend services using Node.js and Go, supporting over 5M users and 400K monthly active users (MAU), ensuring robust performance under high traffic loads.",
+        "Refactored core architecture and optimized Express.js-based APIs, achieving a 3x reduction in average load times and improving response latency by 65% through efficient caching and query optimization in MongoDB.",
+        "Led the migration of critical data workflows to Kafka-based event-driven pipelines, enhancing fault tolerance by 40%, scalability for peak loads, and throughput by 50%, enabling seamless real-time data processing.",
+        "Instrumented comprehensive real-time monitoring and alerting systems using Prometheus and Signoz, reducing system downtime by 30% and cutting incident response time by 45% through proactive issue detection.",
+        "Managed multi-environment deployments across production, analytics, and development clusters using Kubernetes, orchestrating seamless database migrations for MongoDB with zero downtime.",
+        "Developed and implemented automated deployment and rollback workflows with ArgoCD and Kubernetes, increasing release velocity by 60% and improving deployment reliability with automated health checks and rollback mechanisms.",
+        "Enhanced system observability by integrating advanced error tracking and logging with Signoz, reducing API failure rates by 25% through targeted improvements in error handling and retry logic.",
+        "Collaborated with mobile and product teams to integrate backend services with high-scale Android and iOS applications, ensuring seamless API performance and compatibility for over 1M concurrent users.",
+        "Implemented Google Analytics and custom event tracking pipelines, driving a 20% increase in click-through rates (CTR) and a 15% improvement in user monetization through data-driven optimizations.",
+        "Designed and deployed containerized microservices on AWS (ECS/EKS), optimizing resource utilization and reducing infrastructure costs by 18% while maintaining 99.9% uptime."
       ],
       "projects": [
         {
-          "name": "AdTrack Analytics Platform",
-          "description": "Built a real-time ad tracking and analytics platform handling 10M+ events per day",
-          "technologies": ["Golang", "PostgreSQL", "Redis", "Kafka"],
-          "impact": "Increased revenue tracking accuracy by 95% and reduced data processing latency by 60%",
+          "name": "Scalable User Platform",
+          "description": "Built and maintained backend services supporting millions of users with Node.js, Go, and MongoDB.",
+          "technologies": ["Node.js", "Golang", "MongoDB", "Express.js", "Kafka"],
+          "impact": "Enabled robust performance for 5M+ users and 400K MAU with high reliability.",
           "highlights": [
-            "Designed microservices architecture for high-throughput data processing",
-            "Implemented real-time dashboards with sub-second query response times",
-            "Built automated data pipeline with 99.9% uptime"
+            "Architected event-driven pipelines for real-time data processing",
+            "Optimized API response latency and load times",
+            "Integrated monitoring and alerting for proactive issue detection"
           ]
         },
         {
-          "name": "AI Creative Generation System",
-          "description": "Developed an AI-powered system for automated ad creative generation using custom models",
-          "technologies": ["Python", "FastAPI", "OpenAI", "Stable Diffusion", "MongoDB"],
-          "impact": "Reduced manual ad creation time by 80% and increased creative output by 300%",
+          "name": "Microservices Deployment Automation",
+          "description": "Automated deployment and rollback workflows for containerized microservices on AWS using Kubernetes and ArgoCD.",
+          "technologies": ["Kubernetes", "ArgoCD", "AWS", "Docker"],
+          "impact": "Increased release velocity and deployment reliability with zero downtime migrations.",
           "highlights": [
-            "Fine-tuned custom models for brand-specific creative generation",
-            "Built scalable API handling 1000+ concurrent requests",
-            "Implemented quality scoring system with 92% accuracy"
+            "Orchestrated multi-environment deployments",
+            "Implemented automated health checks and rollback mechanisms",
+            "Reduced infrastructure costs while maintaining high uptime"
           ]
         }
       ]
     },
     {
-      "id": "prishi",
-      "title": "Backend Developer",
-      "company": "Prishi",
+      "id": "ibdtd",
+      "title": "SDE-1 (Intern)",
+      "company": "IBDTD Technologies",
       "location": "Remote",
-      "period": "Nov 2023 - Dec 2024",
-      "type": "Full-time",
-      "technologies": ["Django", "FastAPI", "PostgreSQL", "Azure", "Docker"],
-      "achievements": [
-        "Refactored critical backend services, reducing page load times by 3x and improving backend response time under high concurrency.",
-        "Owned the lifecycle of a key internal platform, delivering it ahead of schedule with high stability and 100% uptime post-deployment.",
-        "Introduced advanced caching and query optimization strategies, cutting DB queries by 40% and enhancing system scalability."
-      ],
-      "projects": [
-        {
-          "name": "E-commerce Backend Optimization",
-          "description": "Refactored and optimized the core e-commerce platform backend for better performance",
-          "technologies": ["Django", "PostgreSQL", "Redis", "Celery"],
-          "impact": "Improved page load times by 3x and reduced server costs by 40%",
-          "highlights": [
-            "Implemented advanced caching strategies reducing DB load by 60%",
-            "Optimized database queries cutting response time from 2s to 400ms",
-            "Built asynchronous task processing system handling 50K+ jobs/day"
-          ]
-        },
-        {
-          "name": "Internal Analytics Dashboard",
-          "description": "Built comprehensive analytics platform for business intelligence and reporting",
-          "technologies": ["FastAPI", "PostgreSQL", "React", "Docker"],
-          "impact": "Enabled data-driven decisions resulting in 25% increase in operational efficiency",
-          "highlights": [
-            "Designed real-time data aggregation pipeline",
-            "Created interactive dashboards with 20+ key metrics",
-            "Implemented role-based access control for 100+ users"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "undigitally",
-      "title": "App Development Lead",
-      "company": "Undigitally",
-      "location": "Remote",
-      "period": "Jan - Oct 2023",
-      "type": "Contract",
-      "technologies": ["Flutter", "Firebase", "FastAPI", "Azure SQL"],
-      "achievements": [
-        "Led backend development for a cross-platform mobile app, improving API latency by 35% through architectural improvements.",
-        "Streamlined integration with frontend and QA teams, cutting production bugs related to API contracts by 50%."
-      ],
-      "projects": [
-        {
-          "name": "Cross-Platform Mobile App",
-          "description": "Led development of a social networking mobile application with real-time features",
-          "technologies": ["Flutter", "Firebase", "FastAPI", "Azure SQL"],
-          "impact": "Launched app with 10K+ downloads in first month and 4.5+ app store rating",
-          "highlights": [
-            "Built real-time messaging system supporting 1000+ concurrent users",
-            "Implemented offline-first architecture with data synchronization",
-            "Created comprehensive API documentation reducing integration time by 50%"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "police-hq",
-      "title": "Web Development Intern",
-      "company": "Police HQ, Bhopal",
-      "location": "Bhopal, India",
-      "period": "Jul - Nov 2021",
+      "period": "Oct 2021 - Mar 2022",
       "type": "Internship",
-      "technologies": ["Django", "MariaDB", "Docker", "Self-Hosted Server"],
+      "technologies": ["Android", "Kotlin", "RxJava", "SQLite"],
       "achievements": [
-        "Designed, developed, and deployed a high-availability web portal for the India Covid Help Group with 0% downtime during peak usage.",
-        "Automated server deployments and managed self-hosted infrastructure, improving deployment speed and stability by 40%."
-      ],
-      "projects": [
-        {
-          "name": "Covid Help Portal",
-          "description": "Developed a web portal for Covid-19 assistance and resource management during the pandemic",
-          "technologies": ["Django", "MariaDB", "Bootstrap", "Docker"],
-          "impact": "Served 50K+ users during peak pandemic period with zero downtime",
-          "highlights": [
-            "Built resource tracking system for hospitals and medical supplies",
-            "Implemented user authentication and role-based access control",
-            "Created automated deployment pipeline reducing deployment time by 70%"
-          ]
-        }
+        "Refactored legacy Android codebases, introducing MVVM architecture and Dependency Injection to improve maintainability and scalability.",
+        "Developed and integrated unit and instrumentation tests, increasing code coverage and reliability for production releases.",
+        "Enhanced debugging workflows and automated build processes, reducing release cycle time and improving team productivity.",
+        "Collaborated with senior engineers to migrate critical features to modern Android APIs, resulting in improved app performance and stability.",
+        "Contributed to feature development and bug fixes for live applications, supporting successful production deployments."
       ]
     }
   ],
   "personalProjects": [
     {
-      "title": "Email Campaign Manager",
-      "description": "Create Newsletters, Email campaigns, manage subscribers for newsletter, and schedule emails ahead of time.",
-      "technologies": ["Django", "DRF", "Celery", "Redis", "Docker"],
-      "github": "https://github.com/kaustubha/email-campaign-manager",
-      "demo": "https://email-manager-demo.com",
-      "status": "Active"
-    },
-    {
-      "title": "Talk To Data",
-      "description": "Query CSV or SQL data sources using natural language with the help of an interactive API built on top of custom fine-tuned Llama-3.1-8b and Langchain.",
-      "technologies": ["Python", "Langchain", "Unsloth", "Groq", "Pandas", "FastAPI"],
-      "github": "https://github.com/kaustubha/talk-to-data",
-      "demo": "https://talk-to-data-demo.com",
-      "status": "Active"
-    },
-    {
-      "title": "CRAG-BNS",
-      "description": "Developed a CRAG system to provide context-aware answers from Bharatiya Nyaya Sanhita 2023 using advanced document retrieval and grading workflows.",
-      "technologies": ["Python", "Langchain", "ChromaDB", "Langgraph", "Groq"],
-      "github": "https://github.com/kaustubha/crag-bns",
+      "title": "Media-Centric Booking System",
+      "description": "Developed RESTful APIs for a movie booking platform with advanced reporting, analytics, and real-time reservation tracking. Integrated role-based authentication and JWT for secure access.",
+      "technologies": ["GoLang", "Gin", "PostgreSQL", "JWT", "GORM"],
+      "github": "https://github.com/atharv028/movie-reservation-system",
       "status": "Completed"
     },
     {
-      "title": "ATS Resume Reviewer",
-      "description": "Built a resume reviewer delivering match scores, strengths/weaknesses insights, and competitive analysis based on job market trends.",
-      "technologies": ["Python", "Groq", "Serper", "CrewAI", "NextJS", "FastAPI"],
-      "github": "https://github.com/kaustubha/ats-resume-reviewer",
-      "demo": "https://ats-reviewer-demo.com",
-      "status": "Active"
-    },
-    {
-      "title": "Eva the Virtual Assistant",
-      "description": "Created Eva for automating tasks like file management, app launching, scheduling, and web searches, boosting productivity.",
-      "technologies": ["Python", "Langchain", "Groq", "Deepgram", "OpenAI", "OpenCV"],
-      "github": "https://github.com/kaustubha/eva-assistant",
-      "status": "Active"
-    },
-    {
-      "title": "Music-Based Encryption with Generative RNN",
-      "description": "Developed an RNN-based encryption system that generates custom music patterns for secure encryption.",
-      "technologies": ["Python", "Keras", "Pandas", "NumPy", "Flask", "RNN-based model"],
-      "github": "https://github.com/kaustubha/music-encryption",
+      "title": "Cross-DB Backup Tool",
+      "description": "Built CLI tools for backup and restore operations across MongoDB, PostgreSQL, and SQLite databases. Automated Slack notifications for backup status and integrated S3 for cloud storage.",
+      "technologies": ["Python", "SQL", "NoSQL", "S3", "Slack"],
+      "github": "https://github.com/atharv028/db-backup-cli",
       "status": "Completed"
+    },
+    {
+      "title": "Real-Time Chat API",
+      "description": "Developed a scalable chat API using Node.js, Express.js, and MongoDB, supporting real-time messaging for thousands of concurrent users.",
+      "technologies": ["Node.js", "Express.js", "MongoDB", "Socket.io", "Docker"],
+      "github": "https://github.com/atharv-tare/realtime-chat-api",
+      "status": "Active"
+    },
+    {
+      "title": "Event-Driven Notification Service",
+      "description": "Built a notification microservice using Go and Kafka, enabling real-time alerts and updates for user activities.",
+      "technologies": ["Golang", "Kafka", "MongoDB", "Docker"],
+      "github": "https://github.com/atharv-tare/notification-service",
+      "status": "Active"
+    },
+    {
+      "title": "API Monitoring Dashboard",
+      "description": "Implemented a dashboard for monitoring API health and performance using Prometheus and Signoz.",
+      "technologies": ["Node.js", "Prometheus", "Signoz", "React"],
+      "github": "https://github.com/atharv-tare/api-monitoring-dashboard",
+      "status": "Completed"
+    }
+  ],
+  "skills": {
+    "languages": ["TypeScript", "JavaScript", "GoLang", "Java", "Kotlin"],
+    "frameworks": ["Node.js", "Express.js", "Vite", "GORM", "Gin", "Echo", "Fiber"],
+    "databases": ["MongoDB", "PostgreSQL", "Redis"],
+    "devops": ["Docker", "Kubernetes", "AWS", "Git", "CI/CD pipelines", "GitHub"],
+    "concepts": ["Web Scraping", "RESTful", "GraphQL", "gRPC"]
+  },
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science",
+      "institution": "Rajiv Gandhi Proudyogiki Vishwavidyalaya",
+      "period": "Aug 2019 - Jul 2023",
+      "location": "Bhopal, IN",
+      "cgpa": "8.6"
     }
   ]
 }
