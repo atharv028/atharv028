@@ -56,13 +56,13 @@ export default function ProfileCard({ profile }: ProfileCardProps) {
         {/* Contact, LinkedIn, GitHub as icon-only buttons without outlines */}
         <div className="flex space-x-2 justify-center">
           <Button
-            variant="ghost" // Changed to ghost to remove outline
-            size="icon" // Icon-only button
-            className="text-slate-300 hover:text-white hover:bg-slate-800"
+            variant="ghost"
+            className="text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700"
             onClick={handleContact}
             title="Contact"
           >
             <Mail className="w-4 h-4" />
+            Contact Me
           </Button>
           <Button
             variant="ghost" // Changed to ghost to remove outline
