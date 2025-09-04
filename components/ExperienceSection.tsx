@@ -1,168 +1,276 @@
 "use client"
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Building, MapPin, Calendar, Star, Code, TrendingUp, Eye, EyeOff } from "lucide-react"
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin, Users, TrendingUp, Zap, Shield } from "lucide-react";
 
-interface Project {
-  name: string
-  description: string
-  technologies: string[]
-  impact: string
-  highlights: string[]
-}
-
-interface Experience {
-  id: string
-  title: string
-  company: string
-  location: string
-  period: string
-  type: string
-  technologies: string[]
-  achievements: string[]
-  projects: Project[]
-}
-
-interface ExperienceSectionProps {
-  experiences: Experience[]
-}
-
-export default function ExperienceSection({ experiences }: ExperienceSectionProps) {
-  const [expandedProjects, setExpandedProjects] = useState<Record<string, boolean>>({})
-
-  const toggleProject = (experienceId: string, projectName: string) => {
-    const key = `${experienceId}-${projectName}`
-    setExpandedProjects((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }))
+const achievements = [
+  {
+    icon: Users,
+    metric: "5M+ Users",
+    description: "Built and maintained full-stack applications using Node.js, React, and AWS, supporting over 5M users with robust backend APIs and responsive frontend interfaces."
+  },
+  {
+    icon: TrendingUp,
+    metric: "3X Performance",
+    description: "Optimized full-stack architecture with Express.js APIs and React frontend, achieving 3X faster load times and 65% improved response latency through efficient caching and code splitting."
+  },
+  {
+    icon: Zap,
+    metric: "40% Efficiency",
+    description: "Implemented event-driven architecture with Kafka and real-time frontend updates using WebSockets, enhancing system efficiency by 40% and enabling seamless user experiences."
+  },
+  {
+    icon: Shield,
+    metric: "99.9% Uptime",
+    description: "Deployed scalable applications on AWS with Vercel frontend hosting, achieving 99.9% uptime through comprehensive monitoring, automated deployments, and cloud infrastructure optimization."
   }
+];
 
+const projects = [
+  {
+    title: "Full-Stack Web Application",
+    description: "Developed end-to-end web application with React frontend, Node.js backend, and AWS cloud infrastructure supporting millions of users.",
+    technologies: ["React", "Node.js", "AWS", "PostgreSQL"],
+    metrics: "5M+ users, 99.9% uptime"
+  },
+  {
+    title: "Cloud-Native Deployment Pipeline", 
+    description: "Implemented CI/CD pipeline with Vercel frontend deployment, AWS Amplify, and S3 storage with automated testing and monitoring.",
+    technologies: ["Vercel", "AWS Amplify", "S3", "Docker"],
+    metrics: "Zero downtime deployments"
+  }
+];
+
+export const Experience = () => {
   return (
-    <div className="space-y-6">
-      {/* Removed heading */}
-      {experiences.map((exp, index) => (
-        <motion.div
-          key={exp.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-        >
-          <Card className="bg-slate-900 border-slate-800 hover:border-slate-700 transition-colors">
-            <CardContent className="p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-1">{exp.title}</h3>
-                  <div className="flex items-center text-blue-400 mb-2">
-                    <Building className="w-4 h-4 mr-2" />
-                    {exp.company}
-                    <Badge variant="outline" className="ml-2 border-slate-600 text-slate-300 text-xs">
-                      {exp.type}
-                    </Badge>
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="text-center mb-12 sm:mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+          Professional <span className="text-gradient">Experience</span>
+        </h2>
+        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+          3+ years of building full-stack applications with backend focus, modern frontend technologies, and cloud deployment expertise
+        </p>
+      </div>
+
+      {/* Current Role */}
+      <Card className="p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 bg-card/80 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 sm:mb-6">
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+              Software Engineer I
+            </h3>
+            <div className="flex items-center text-primary font-semibold mb-2">
+              <span>Phot.AI</span>
+            </div>
+            <div className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center">
+                <Calendar className="w-4 h-4 mr-1 flex-shrink-0" />
+                <span>Dec 2022 - Present</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
+                <span>Delhi, India</span>
+              </div>
+              <Badge variant="secondary" className="bg-success text-success-foreground w-fit">
+                Full-time
+              </Badge>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-6 sm:mb-8">
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Key Achievements</h4>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+            {achievements.map((achievement, index) => {
+              const Icon = achievement.icon;
+              return (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="p-2 bg-gradient-primary rounded-lg flex-shrink-0">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
                   </div>
-                  <div className="flex items-center text-slate-400 text-sm">
-                    <MapPin className="w-4 h-4 mr-1" />
-                    <span className="mr-4">{exp.location}</span>
-                    <Calendar className="w-4 h-4 mr-1" />
-                    <span>{exp.period}</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {exp.technologies.map((tech) => (
-                  <Badge key={tech} variant="outline" className="border-slate-700 text-slate-200">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-
-              <div className="mb-6">
-                <h4 className="text-sm font-medium text-slate-300 mb-3">Key Achievements</h4>
-                <ul className="space-y-2">
-                  {exp.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="flex items-start text-slate-200">
-                      <Star className="w-4 h-4 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm leading-relaxed">{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {exp.projects && exp.projects.length > 0 && (
-                <div>
-                  <h4 className="text-sm font-medium text-slate-300 mb-3 flex items-center">
-                    <Code className="w-4 h-4 mr-2" />
-                    Key Projects ({exp.projects.length})
-                  </h4>
-                  <div className="space-y-4">
-                    {exp.projects.map((project, projectIndex) => {
-                      const projectKey = `${exp.id}-${project.name}`
-                      const isExpanded = expandedProjects[projectKey]
-
-                      return (
-                        <div key={projectIndex} className="bg-slate-800/50 rounded-lg p-4 border border-slate-700/50">
-                          <div className="flex items-start justify-between mb-3">
-                            <div className="flex-1">
-                              <h5 className="font-medium text-white mb-1">{project.name}</h5>
-                              <p className="text-sm text-slate-300 mb-2">{project.description}</p>
-                              <div className="flex items-center text-xs text-green-400 mb-2">
-                                <TrendingUp className="w-3 h-3 mr-1" />
-                                {project.impact}
-                              </div>
-                            </div>
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              onClick={() => toggleProject(exp.id, project.name)}
-                              className="text-slate-400 hover:text-white hover:bg-slate-700"
-                            >
-                              {isExpanded ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                            </Button>
-                          </div>
-
-                          <div className="flex flex-wrap gap-1 mb-3">
-                            {project.technologies.map((tech) => (
-                              <Badge key={tech} variant="secondary" className="bg-slate-700 text-slate-200 text-xs">
-                                {tech}
-                              </Badge>
-                            ))}
-                          </div>
-
-                          {isExpanded && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.3 }}
-                            >
-                              <div className="border-t border-slate-700 pt-3">
-                                <h6 className="text-xs font-medium text-slate-300 mb-2">Technical Highlights</h6>
-                                <ul className="space-y-1">
-                                  {project.highlights.map((highlight, highlightIndex) => (
-                                    <li key={highlightIndex} className="flex items-start text-xs text-slate-200">
-                                      <div className="w-1 h-1 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0" />
-                                      {highlight}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </motion.div>
-                          )}
-                        </div>
-                      )
-                    })}
+                  <div className="min-w-0">
+                    <div className="font-semibold text-primary mb-1 text-sm sm:text-base">{achievement.metric}</div>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                      {achievement.description}
+                    </p>
                   </div>
                 </div>
-              )}
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
-    </div>
-  )
-}
+              );
+            })}
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Key Projects</h4>
+          <div className="space-y-3 sm:space-y-4">
+            {projects.map((project, index) => (
+              <Card key={index} className="p-3 sm:p-4 bg-secondary/50 border-secondary">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                  <div className="mb-3 md:mb-0 flex-1 min-w-0">
+                    <h5 className="font-semibold text-foreground mb-1 text-sm sm:text-base">{project.title}</h5>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-2">{project.description}</p>
+                    <div className="flex flex-wrap gap-1 sm:gap-2">
+                      {project.technologies.map((tech) => (
+                        <Badge key={tech} variant="outline" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="text-left md:text-right mt-2 md:mt-0">
+                    <div className="text-xs sm:text-sm font-medium text-accent">{project.metrics}</div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </Card>
+
+      <Card className="p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 bg-card/80 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 sm:mb-6">
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+              SDE-1 (Intern)
+            </h3>
+            <div className="flex items-center text-primary font-semibold mb-2">
+              <span>Appyhigh Technologies</span>
+              <Badge variant="secondary" className="bg-accent text-accent-foreground ml-2">
+                Internship
+              </Badge>
+            </div>
+            <div className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center">
+                <Calendar className="w-4 h-4 mr-1 flex-shrink-0" />
+                <span>Mar 2022 - Dec 2022</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
+                <span>Remote</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-6 sm:mb-8">
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Technologies Used</h4>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="text-xs">Android</Badge>
+            <Badge variant="outline" className="text-xs">Kotlin</Badge>
+            <Badge variant="outline" className="text-xs">RxJava</Badge>
+            <Badge variant="outline" className="text-xs">SQLite</Badge>
+            <Badge variant="outline" className="text-xs">Firebase</Badge>
+            <Badge variant="outline" className="text-xs">Firestore</Badge>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Key Achievements</h4>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Refactored legacy Android codebases, introducing MVVM architecture and Dependency Injection to improve maintainability and scalability.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Developed and integrated unit and instrumentation tests, increasing code coverage and reliability for production releases.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Enhanced debugging workflows and automated build processes, reducing release cycle time and improving team productivity.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Collaborated with senior engineers to migrate critical features to modern Android APIs, resulting in improved app performance and stability.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Contributed to feature development and bug fixes for live applications, supporting successful production deployments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Card>
+
+      {/* Previous Role */}
+      <Card className="p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 bg-card/80 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 sm:mb-6">
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+              Android Developer (Intern)
+            </h3>
+            <div className="flex items-center text-primary font-semibold mb-2">
+              <span>IBDTD Technologies</span>
+              <Badge variant="secondary" className="bg-accent text-accent-foreground ml-2">
+                Internship
+              </Badge>
+            </div>
+            <div className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center">
+                <Calendar className="w-4 h-4 mr-1 flex-shrink-0" />
+                <span>Oct 2021 - Mar 2022</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
+                <span>Remote</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-6 sm:mb-8">
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Technologies Used</h4>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="text-xs">Android</Badge>
+            <Badge variant="outline" className="text-xs">Kotlin</Badge>
+            <Badge variant="outline" className="text-xs">RxJava</Badge>
+            <Badge variant="outline" className="text-xs">SQLite</Badge>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Key Achievements</h4>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              Refactored legacy codebases and implemented modern architectural practices such as MVVM and Dependency In-jection.
+             </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+               Wrote tests, improved debugging processes, and contributed to production releases. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </Card>
+    </section>
+  );
+};

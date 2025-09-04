@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="shortcut icon"
@@ -76,7 +77,11 @@ html {
         />
       </head>
       
-      <body>{children}</body>
+      <body>
+        <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
