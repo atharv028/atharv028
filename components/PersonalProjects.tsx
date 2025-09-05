@@ -9,6 +9,8 @@ import {
   Code2,
   ExternalLink
 } from "lucide-react";
+import { useAnalytics, useProjectAnalytics } from "@/hooks/useAnalytics";
+import { ANALYTICS_COMPONENTS, ANALYTICS_ACTIONS } from "@/lib/analytics";
 
 const personalProjects = [
   {
@@ -60,9 +62,26 @@ const personalProjects = [
 
 const ProjectCard = ({ project }: { project: typeof personalProjects[0] }) => {
   const StatusIcon = project.statusIcon;
+  const { trackProjectView, trackProjectClick, trackTechBadgeHover } = useProjectAnalytics();
+
+  const handleProjectView = () => {
+    trackProjectView(project.title, project.status);
+  };
+
+  const handleCodeClick = () => {
+    trackProjectClick(project.title, ANALYTICS_ACTIONS.CLICK, project.githubUrl);
+    window.open(project.githubUrl, '_blank');
+  };
+
+  const handleTechHover = (tech: string) => {
+    trackTechBadgeHover(tech, project.title);
+  };
   
   return (
-    <Card className="p-4 sm:p-6 bg-card/80 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:glow-primary">
+    <Card 
+      className="p-4 sm:p-6 bg-card/80 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:glow-primary"
+      onMouseEnter={handleProjectView}
+    >
       <div className="flex items-start justify-between mb-3 sm:mb-4">
         <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
           {project.title}
@@ -86,6 +105,7 @@ const ProjectCard = ({ project }: { project: typeof personalProjects[0] }) => {
             key={tech} 
             variant="outline" 
             className="text-xs hover:bg-primary/10 hover:border-primary/40 transition-colors cursor-pointer"
+            onMouseEnter={() => handleTechHover(tech)}
           >
             {tech}
           </Badge>
@@ -96,7 +116,7 @@ const ProjectCard = ({ project }: { project: typeof personalProjects[0] }) => {
         variant="outline" 
         size="sm" 
         className="w-full sm:w-auto group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
-        onClick={() => window.open(project.githubUrl, '_blank')}
+        onClick={handleCodeClick}
       >
         <Code2 className="w-4 h-4 mr-2" />
         Code
@@ -107,14 +127,19 @@ const ProjectCard = ({ project }: { project: typeof personalProjects[0] }) => {
 };
 
 export const PersonalProjects = () => {
+  const { componentRef } = useAnalytics(
+    ANALYTICS_COMPONENTS.PROJECTS,
+    'personal_projects_section'
+  );
+
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section ref={componentRef} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
       <div className="text-center mb-12 sm:mb-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Personal <span className="text-gradient">Projects</span>
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-          Side projects and personal initiatives showcasing technical skills and creativity
+          Full Stack Developer projects showcasing expertise in modern web technologies, APIs, and cloud architecture
         </p>
       </div>
 

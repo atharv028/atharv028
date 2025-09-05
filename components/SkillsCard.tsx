@@ -1,6 +1,8 @@
 "use client"
 
 import { Card } from "@/components/ui/card";
+import { useAnalytics, useSkillsAnalytics } from "@/hooks/useAnalytics";
+import { ANALYTICS_COMPONENTS, ANALYTICS_ACTIONS } from "@/lib/analytics";
 import { 
   Code, 
   Database, 
@@ -125,14 +127,28 @@ const skillCategories = [
 ];
 
 export const Skills = () => {
+  const { componentRef } = useAnalytics(
+    ANALYTICS_COMPONENTS.SKILLS,
+    'skills_section'
+  );
+  const { trackSkillHover, trackCategoryView } = useSkillsAnalytics();
+
+  const handleCategoryView = (categoryTitle: string) => {
+    trackCategoryView(categoryTitle);
+  };
+
+  const handleSkillHover = (skillName: string, categoryTitle: string) => {
+    trackSkillHover(skillName, categoryTitle);
+  };
+
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section ref={componentRef} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
       <div className="text-center mb-12 sm:mb-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Technical <span className="text-gradient">Expertise</span>
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-          Full-stack development skills with backend focus, modern frontend technologies, and cloud deployment expertise
+          Full Stack Developer skills spanning backend systems, frontend technologies, cloud architecture, and DevOps practices
         </p>
       </div>
 
@@ -144,6 +160,7 @@ export const Skills = () => {
               key={category.title} 
               className="p-4 sm:p-6 bg-card/80 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 group hover:glow-primary"
               style={{ animationDelay: `${index * 100}ms` }}
+              onMouseEnter={() => handleCategoryView(category.title)}
             >
               <div className="flex items-center mb-4 sm:mb-5">
                 <div className="p-2 bg-gradient-primary rounded-lg mr-3 group-hover:animate-pulse flex-shrink-0">
@@ -156,7 +173,11 @@ export const Skills = () => {
                 {category.skills.map((skill) => {
                   const IconComponent = skill.icon;
                   return (
-                    <div key={skill.name} className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors">
+                    <div 
+                      key={skill.name} 
+                      className="flex items-center space-x-2 p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
+                      onMouseEnter={() => handleSkillHover(skill.name, category.title)}
+                    >
                       <IconComponent 
                         className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
                       />

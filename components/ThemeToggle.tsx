@@ -3,19 +3,29 @@
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/components/theme-provider"
+import { useThemeAnalytics } from "@/hooks/useAnalytics"
+import { ANALYTICS_COMPONENTS } from "@/lib/analytics"
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
+  const { trackThemeToggle } = useThemeAnalytics()
 
   const toggleTheme = () => {
+    let newTheme: string;
+    
     if (theme === "light") {
-      setTheme("dark")
+      newTheme = "dark"
     } else if (theme === "dark") {
-      setTheme("light")
+      newTheme = "light"
     } else {
       // If system, default to light first
-      setTheme("light")
+      newTheme = "light"
     }
+    
+    // Track theme change
+    trackThemeToggle(newTheme);
+    
+    setTheme(newTheme as "light" | "dark" | "system")
   }
 
   return (

@@ -3,6 +3,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, TrendingUp, Zap, Shield } from "lucide-react";
+import { useAnalytics, useExperienceAnalytics } from "@/hooks/useAnalytics";
+import { ANALYTICS_COMPONENTS, ANALYTICS_ACTIONS } from "@/lib/analytics";
 
 const achievements = [
   {
@@ -43,14 +45,28 @@ const projects = [
 ];
 
 export const Experience = () => {
+  const { componentRef } = useAnalytics(
+    ANALYTICS_COMPONENTS.EXPERIENCE,
+    'experience_section'
+  );
+  const { trackAchievementView, trackProjectView } = useExperienceAnalytics();
+
+  const handleAchievementView = (achievement: string, company: string) => {
+    trackAchievementView(achievement, company);
+  };
+
+  const handleProjectView = (projectName: string, company: string) => {
+    trackProjectView(projectName, company);
+  };
+
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section ref={componentRef} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
       <div className="text-center mb-12 sm:mb-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Professional <span className="text-gradient">Experience</span>
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-          3+ years of building full-stack applications with backend focus, modern frontend technologies, and cloud deployment expertise
+          Full Stack Developer with 3+ years of experience building scalable applications, modern frontend technologies, and cloud deployment expertise
         </p>
       </div>
 
@@ -59,7 +75,7 @@ export const Experience = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 sm:mb-6">
           <div>
             <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
-              Software Engineer I
+              Software Development Engineer I | Full Stack Developer
             </h3>
             <div className="flex items-center text-primary font-semibold mb-2">
               <span>Phot.AI</span>
@@ -86,7 +102,11 @@ export const Experience = () => {
             {achievements.map((achievement, index) => {
               const Icon = achievement.icon;
               return (
-                <div key={index} className="flex items-start space-x-3">
+                <div 
+                  key={index} 
+                  className="flex items-start space-x-3"
+                  onMouseEnter={() => handleAchievementView(achievement.metric, 'Phot.AI')}
+                >
                   <div className="p-2 bg-gradient-primary rounded-lg flex-shrink-0">
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
                   </div>
@@ -106,7 +126,11 @@ export const Experience = () => {
           <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Key Projects</h4>
           <div className="space-y-3 sm:space-y-4">
             {projects.map((project, index) => (
-              <Card key={index} className="p-3 sm:p-4 bg-secondary/50 border-secondary">
+              <Card 
+                key={index} 
+                className="p-3 sm:p-4 bg-secondary/50 border-secondary"
+                onMouseEnter={() => handleProjectView(project.title, 'Phot.AI')}
+              >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="mb-3 md:mb-0 flex-1 min-w-0">
                     <h5 className="font-semibold text-foreground mb-1 text-sm sm:text-base">{project.title}</h5>

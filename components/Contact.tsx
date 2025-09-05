@@ -4,10 +4,38 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Phone, MapPin, Download, ExternalLink, Github, Linkedin } from "lucide-react";
+import { useAnalytics, useContactAnalytics } from "@/hooks/useAnalytics";
+import { ANALYTICS_COMPONENTS, ANALYTICS_ACTIONS } from "@/lib/analytics";
 
 export const Contact = () => {
+  const { componentRef } = useAnalytics(
+    ANALYTICS_COMPONENTS.CONTACT,
+    'contact_section'
+  );
+  const { trackEmailClick, trackSocialClick, trackResumeDownload } = useContactAnalytics();
+
+  const handleEmailClick = () => {
+    trackEmailClick('hire.atharv@gmail.com');
+    window.open("mailto:hire.atharv@gmail.com", "_blank");
+  };
+
+  const handleGithubClick = () => {
+    trackSocialClick('github', 'https://github.com/atharv028');
+    window.open("https://github.com/atharv028", "_blank");
+  };
+
+  const handleLinkedinClick = () => {
+    trackSocialClick('linkedin', 'https://linkedin.com/in/atharv-tare');
+    window.open("https://linkedin.com/in/atharv-tare", "_blank");
+  };
+
+  const handleResumeDownload = () => {
+    trackResumeDownload('atharv_gen.pdf');
+    window.open("/atharv_gen.pdf", "_blank");
+  };
+
   return (
-    <section id="contact-section" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-4xl mx-auto">
+    <section ref={componentRef} id="contact-section" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-4xl mx-auto">
       <div className="text-center mb-12 sm:mb-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           Let's <span className="text-gradient">Connect</span>
@@ -63,7 +91,7 @@ export const Contact = () => {
               size="sm" 
               variant="outline" 
               className="bg-card/20 backdrop-blur-sm border-primary/30 flex-1 xs:flex-none items-center justify-center py-2"
-              onClick={() => window.open("https://github.com/atharv028", "_blank")}
+              onClick={handleGithubClick}
             >
               <span className="flex items-center">
                 <Github className="w-5 h-5 mr-2 p-0.5" />
@@ -74,7 +102,7 @@ export const Contact = () => {
               size="sm" 
               variant="outline" 
               className="bg-card/20 backdrop-blur-sm border-primary/30 flex-1 xs:flex-none items-center justify-center py-2"
-              onClick={() => window.open("https://linkedin.com/in/atharv-tare", "_blank")}
+              onClick={handleLinkedinClick}
             >
               <span className="flex items-center">
                 <Linkedin className="w-5 h-5 mr-2 p-0.5" />
@@ -95,7 +123,7 @@ export const Contact = () => {
           <div className="space-y-2 sm:space-y-3">
             <Button 
               className="w-full bg-gradient-primary text-primary-foreground hover:opacity-90 glow-primary"
-              onClick={() => window.open("mailto:hire.atharv@gmail.com", "_blank")}
+              onClick={handleEmailClick}
             >
               <Mail className="w-4 h-4 mr-2" />
               <span className="text-sm sm:text-base">Send Message</span>
@@ -104,7 +132,7 @@ export const Contact = () => {
             <Button 
               variant="outline" 
               className="w-full bg-card/20 backdrop-blur-sm border-primary/30"
-              onClick={() => window.open("/atharv_gen.pdf", "_blank")}
+              onClick={handleResumeDownload}
             >
               <Download className="w-4 h-4 mr-2" />
               <span className="text-sm sm:text-base">Download Resume</span>

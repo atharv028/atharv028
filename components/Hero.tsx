@@ -3,20 +3,40 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, Mail, ExternalLink } from "lucide-react";
-
-const scrollToContact = () => {
-  const contactSection = document.getElementById('contact-section');
-  if (contactSection) {
-    contactSection.scrollIntoView({ 
-      behavior: 'smooth',
-      block: 'start'
-    });
-  }
-};
+import { useAnalytics } from "@/hooks/useAnalytics";
+import { ANALYTICS_COMPONENTS, ANALYTICS_ACTIONS } from "@/lib/analytics";
 
 export const Hero = () => {
+  const { componentRef, trackClick, trackDownload, trackConversion } = useAnalytics(
+    ANALYTICS_COMPONENTS.HERO,
+    'hero_section'
+  );
+
+  const scrollToContact = () => {
+    trackClick(ANALYTICS_ACTIONS.CLICK, 'contact_button', undefined, {
+      action_type: 'scroll_to_contact',
+      button_text: 'Contact Me'
+    });
+    
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const handleResumeDownload = () => {
+    trackDownload('atharv_gen.pdf', 'pdf');
+    trackConversion('resume_download', 'hero_resume_download', 1, {
+      download_source: 'hero_section',
+      file_type: 'pdf'
+    });
+    window.open("/atharv_gen.pdf", "_blank");
+  };
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={componentRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -48,14 +68,14 @@ export const Hero = () => {
         </h1>
         
         <h2 className="text-lg xs:text-xl sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 px-2">
-          Full-Stack Developer @ Phot.AI
+          Full Stack Developer Portfolio | Software Engineer @ Phot.AI
         </h2>
 
         {/* Value Proposition */}
         <p className="text-base xs:text-lg sm:text-lg md:text-xl text-foreground/80 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-2">
-          Full-stack developer with <span className="text-primary font-semibold">3+ years</span> of experience 
+          Experienced <span className="text-primary font-semibold">Full Stack Developer</span> with <span className="text-primary font-semibold">3+ years</span> of expertise 
           building scalable backend systems and modern frontend applications. 
-          Expert in <span className="text-accent font-semibold">Node.js, React, AWS</span> and cloud architecture.
+          Specialized in <span className="text-accent font-semibold">Node.js, React, AWS</span> and cloud architecture for high-performance software engineering solutions.
         </p>
 
         {/* Key Metrics */}
@@ -89,7 +109,7 @@ export const Hero = () => {
             size="lg" 
             variant="outline"
             className="bg-card/20 backdrop-blur-sm border-primary/30 hover:bg-card/40 w-full xs:w-auto"
-            onClick={() => window.open("/atharv_gen.pdf", "_blank")}
+            onClick={handleResumeDownload}
           >
             <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             <span className="text-sm sm:text-base">Download Resume</span>

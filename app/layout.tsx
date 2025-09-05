@@ -2,13 +2,10 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { ThemeProvider } from "@/components/theme-provider";
+import { generateMetadata, generateStructuredData } from "@/lib/seo";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Atharv Tare",
-  description: "Atharv Tare's personal website",
-  generator: "v1.0",
-};
+export const metadata: Metadata = generateMetadata();
 
 export default function RootLayout({
   children,
@@ -63,7 +60,7 @@ html {
 }
         `}</style>
         
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) - Enhanced for Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0Q34XEYRN"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -71,8 +68,41 @@ html {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-E0Q34XEYRN');
+              
+              // Enhanced GA4 configuration
+              gtag('config', 'G-E0Q34XEYRN', {
+                page_title: 'Atharv Tare - Portfolio',
+                page_location: window.location.href,
+                custom_map: {
+                  'custom_parameter_1': 'component_name',
+                  'custom_parameter_2': 'section_name',
+                  'custom_parameter_3': 'action_type'
+                },
+                send_page_view: true,
+                anonymize_ip: true,
+                allow_google_signals: true,
+                allow_ad_personalization_signals: false
+              });
+              
+              // Track page load time
+              gtag('event', 'timing_complete', {
+                name: 'load',
+                value: Math.round(performance.now())
+              });
+              
+              // Track user engagement
+              gtag('event', 'user_engagement', {
+                engagement_time_msec: 0
+              });
             `,
+          }}
+        />
+        
+        {/* Structured Data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateStructuredData()),
           }}
         />
       </head>
