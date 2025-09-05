@@ -68,14 +68,14 @@ export const Hero = () => {
         </h1>
         
         <h2 className="text-lg xs:text-xl sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 px-2">
-          Full Stack Developer Portfolio | Software Engineer @ Phot.AI
+          Full Stack Developer | Software Engineer @ Phot.AI
         </h2>
 
         {/* Value Proposition */}
         <p className="text-base xs:text-lg sm:text-lg md:text-xl text-foreground/80 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-2">
           Experienced <span className="text-primary font-semibold">Full Stack Developer</span> with <span className="text-primary font-semibold">3+ years</span> of expertise 
           building scalable backend systems and modern frontend applications. 
-          Specialized in <span className="text-accent font-semibold">Node.js, React, AWS</span> and cloud architecture for high-performance software engineering solutions.
+          Specialized in <span className="text-accent font-semibold">Node.js, Next.js, AWS</span> and cloud architecture for high-performance software engineering solutions.
         </p>
 
         {/* Key Metrics */}

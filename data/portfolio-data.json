@@ -46,7 +46,7 @@
       "location": "Delhi, India",
       "period": "Jan 2022 - Present",
       "type": "Full-time",
-      "technologies": ["Node.js", "Golang", "Express.js", "MongoDB", "Kafka", "Kubernetes", "Prometheus", "Signoz", "ArgoCD", "AWS"],
+      "technologies": ["Node.js", "Golang", "Express.js", "Next.js", "MongoDB", "SQL", "NoSQL", "Kafka", "Kubernetes", "Prometheus", "Signoz", "ArgoCD", "AWS", "Google Analytics", "Mixpanel", "Clarity"],
       "achievements": [
         "Designed and maintained highly scalable backend services using Node.js and Go, supporting over 5M users and 400K monthly active users (MAU), ensuring robust performance under high traffic loads.",
         "Refactored core architecture and optimized Express.js-based APIs, achieving a 3x reduction in average load times and improving response latency by 65% through efficient caching and query optimization in MongoDB.",
@@ -91,7 +91,7 @@
       "location": "Remote",
       "period": "Dec 2022 - Mar 2023",
       "type": "Freelance",
-      "technologies": ["TypeScript", "LESS", "Node.js", "MongoDB", "Email Automation", "Data Extraction"],
+      "technologies": ["TypeScript", "LESS", "Node.js", "Next.js", "MongoDB", "SQL", "NoSQL", "Email Automation", "Data Extraction", "Google Analytics"],
       "achievements": [
         "Developed custom email solution for automating and extracting data, handling full project lifecycle from design to deployment.",
         "Designed responsive UI with intuitive forms and dashboard for seamless data input and visualization.",
@@ -121,7 +121,7 @@
       "location": "Remote",
       "period": "Oct 2021 - Mar 2022",
       "type": "Internship",
-      "technologies": ["Android", "Kotlin", "RxJava", "SQLite"],
+      "technologies": ["Android", "Kotlin", "RxJava", "SQLite", "Flutter"],
       "achievements": [
         "Refactored legacy Android codebases, introducing MVVM architecture and Dependency Injection to improve maintainability and scalability.",
         "Developed and integrated unit and instrumentation tests, increasing code coverage and reliability for production releases.",
@@ -170,9 +170,10 @@
   ],
   "skills": {
     "languages": ["TypeScript", "JavaScript", "GoLang", "Java", "Kotlin"],
-    "frameworks": ["Node.js", "Express.js", "Vite", "GORM", "Gin", "Echo", "Fiber"],
-    "databases": ["MongoDB", "PostgreSQL", "Redis"],
+    "frameworks": ["Node.js", "Express.js", "Next.js", "Vite", "GORM", "Gin", "Echo", "Fiber", "Flutter"],
+    "databases": ["MongoDB", "PostgreSQL", "Redis", "SQL", "NoSQL"],
     "devops": ["Docker", "Kubernetes", "AWS", "Git", "CI/CD pipelines", "GitHub"],
+    "analytics": ["Google Analytics", "Mixpanel", "Clarity"],
     "concepts": ["Web Scraping", "RESTful", "GraphQL", "gRPC"]
   },
   "education": [

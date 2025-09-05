@@ -32,14 +32,14 @@ const achievements = [
 const projects = [
   {
     title: "Full-Stack Web Application",
-    description: "Developed end-to-end web application with React frontend, Node.js backend, and AWS cloud infrastructure supporting millions of users.",
-    technologies: ["React", "Node.js", "AWS", "PostgreSQL"],
+    description: "Developed end-to-end web application with Next.js frontend, Node.js backend, and AWS cloud infrastructure supporting millions of users.",
+    technologies: ["Next.js", "Node.js", "AWS", "MongoDB", "SQL", "NoSQL"],
     metrics: "5M+ users, 99.9% uptime"
   },
   {
     title: "Cloud-Native Deployment Pipeline", 
     description: "Implemented CI/CD pipeline with Vercel frontend deployment, AWS Amplify, and S3 storage with automated testing and monitoring.",
-    technologies: ["Vercel", "AWS Amplify", "S3", "Docker"],
+    technologies: ["Vercel", "AWS Amplify", "S3", "Docker", "Kubernetes"],
     metrics: "Zero downtime deployments"
   }
 ];
@@ -93,6 +93,28 @@ export const Experience = () => {
                 Full-time
               </Badge>
             </div>
+          </div>
+        </div>
+
+        <div className="mb-6 sm:mb-8">
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Technologies Used</h4>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="text-xs">Node.js</Badge>
+            <Badge variant="outline" className="text-xs">Golang</Badge>
+            <Badge variant="outline" className="text-xs">Express.js</Badge>
+            <Badge variant="outline" className="text-xs">Next.js</Badge>
+            <Badge variant="outline" className="text-xs">MongoDB</Badge>
+            <Badge variant="outline" className="text-xs">SQL</Badge>
+            <Badge variant="outline" className="text-xs">NoSQL</Badge>
+            <Badge variant="outline" className="text-xs">Kafka</Badge>
+            <Badge variant="outline" className="text-xs">Kubernetes</Badge>
+            <Badge variant="outline" className="text-xs">Prometheus</Badge>
+            <Badge variant="outline" className="text-xs">Signoz</Badge>
+            <Badge variant="outline" className="text-xs">ArgoCD</Badge>
+            <Badge variant="outline" className="text-xs">AWS</Badge>
+            <Badge variant="outline" className="text-xs">Google Analytics</Badge>
+            <Badge variant="outline" className="text-xs">Mixpanel</Badge>
+            <Badge variant="outline" className="text-xs">Clarity</Badge>
           </div>
         </div>
 
@@ -185,9 +207,13 @@ export const Experience = () => {
             <Badge variant="outline" className="text-xs">TypeScript</Badge>
             <Badge variant="outline" className="text-xs">LESS</Badge>
             <Badge variant="outline" className="text-xs">Node.js</Badge>
+            <Badge variant="outline" className="text-xs">Next.js</Badge>
             <Badge variant="outline" className="text-xs">MongoDB</Badge>
+            <Badge variant="outline" className="text-xs">SQL</Badge>
+            <Badge variant="outline" className="text-xs">NoSQL</Badge>
             <Badge variant="outline" className="text-xs">Email Automation</Badge>
             <Badge variant="outline" className="text-xs">Data Extraction</Badge>
+            <Badge variant="outline" className="text-xs">Google Analytics</Badge>
           </div>
         </div>
 
@@ -260,7 +286,10 @@ export const Experience = () => {
                     <Badge variant="outline" className="text-xs">TypeScript</Badge>
                     <Badge variant="outline" className="text-xs">LESS</Badge>
                     <Badge variant="outline" className="text-xs">Node.js</Badge>
+                    <Badge variant="outline" className="text-xs">Next.js</Badge>
                     <Badge variant="outline" className="text-xs">MongoDB</Badge>
+                    <Badge variant="outline" className="text-xs">SQL</Badge>
+                    <Badge variant="outline" className="text-xs">NoSQL</Badge>
                   </div>
                 </div>
                 <div className="text-left md:text-right mt-2 md:mt-0">
@@ -304,6 +333,7 @@ export const Experience = () => {
             <Badge variant="outline" className="text-xs">Kotlin</Badge>
             <Badge variant="outline" className="text-xs">RxJava</Badge>
             <Badge variant="outline" className="text-xs">SQLite</Badge>
+            <Badge variant="outline" className="text-xs">Flutter</Badge>
             <Badge variant="outline" className="text-xs">Firebase</Badge>
             <Badge variant="outline" className="text-xs">Firestore</Badge>
           </div>
@@ -389,6 +419,7 @@ export const Experience = () => {
             <Badge variant="outline" className="text-xs">Kotlin</Badge>
             <Badge variant="outline" className="text-xs">RxJava</Badge>
             <Badge variant="outline" className="text-xs">SQLite</Badge>
+            <Badge variant="outline" className="text-xs">Flutter</Badge>
           </div>
         </div>
 

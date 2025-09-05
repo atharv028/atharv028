@@ -38,12 +38,34 @@ import {
   SiGit,
   SiAndroid,
   SiKotlin,
-  SiSqlite
+  SiSqlite,
+  SiFlutter,
+  SiGoogleanalytics
 } from "react-icons/si";
+
 
 const RedisIcon = () => {
   return (
     <img src="/redis.svg" alt="Redis" className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
+  );
+};
+
+const MixpanelIcon = () => {
+  return (
+    <img src="/mixpanel.png" alt="Mixpanel" className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
+  );
+};
+
+const javaIcon = () => {
+  return (
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"  className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" alt="Java" />
+  );
+};
+
+
+const ClarityIcon = () => {
+  return (
+    <img src="/clarity.png" alt="Clarity" className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
   );
 };
 
@@ -79,7 +101,9 @@ const skillCategories = [
     skills: [
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MongoDB", icon: SiMongodb },
-      { name: "Redis", icon: RedisIcon }
+      { name: "Redis", icon: RedisIcon },
+      { name: "SQL", icon: SiSqlite },
+      { name: "NoSQL", icon: SiMongodb }
     ]
   },
   {
@@ -88,8 +112,9 @@ const skillCategories = [
     skills: [
       { name: "Android", icon: SiAndroid },
       { name: "Kotlin", icon: SiKotlin },
-      { name: "RxJava", icon: SiKotlin },
-      { name: "SQLite", icon: SiSqlite }
+      { name: "RxJava", icon: javaIcon },
+      { name: "SQLite", icon: SiSqlite },
+      { name: "Flutter", icon: SiFlutter }
     ]
   },
   {
@@ -122,6 +147,15 @@ const skillCategories = [
       { name: "Signoz", icon: BarChart3 },
       { name: "Git", icon: SiGit },
       { name: "ArgoCD", icon: BarChart3 }
+    ]
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics & Tracking",
+    skills: [
+      { name: "GA", icon: SiGoogleanalytics },
+      { name: "Mixpanel", icon: MixpanelIcon },
+      { name: "Clarity", icon: ClarityIcon }
     ]
   }
 ];
