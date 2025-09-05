@@ -85,6 +85,36 @@
       ]
     },
     {
+      "id": "forethought",
+      "title": "Full Stack Developer",
+      "company": "Forethought India",
+      "location": "Remote",
+      "period": "Dec 2022 - Mar 2023",
+      "type": "Freelance",
+      "technologies": ["TypeScript", "LESS", "Node.js", "MongoDB", "Email Automation", "Data Extraction"],
+      "achievements": [
+        "Developed custom email solution for automating and extracting data, handling full project lifecycle from design to deployment.",
+        "Designed responsive UI with intuitive forms and dashboard for seamless data input and visualization.",
+        "Built scalable backend using Node.js and MongoDB, capable of handling large amounts of data with reliable service delivery.",
+        "Integrated various APIs for seamless data extraction and automated email processing workflows.",
+        "Collaborated closely with client throughout development process, ensuring requirements alignment and successful delivery.",
+        "Deployed production-ready solution with optimized performance and stability on client servers."
+      ],
+      "projects": [
+        {
+          "name": "Custom Email Automation Platform",
+          "description": "Full-stack email solution with automated data extraction, responsive dashboard, and API integrations.",
+          "technologies": ["TypeScript", "LESS", "Node.js", "MongoDB"],
+          "impact": "Streamlined client operations and enabled valuable data extraction from email campaigns.",
+          "highlights": [
+            "End-to-end development from UI design to production deployment",
+            "Scalable backend architecture for large data processing",
+            "Seamless API integrations for automated workflows"
+          ]
+        }
+      ]
+    },
+    {
       "id": "ibdtd",
       "title": "SDE-1 (Intern)",
       "company": "IBDTD Technologies",

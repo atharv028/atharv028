@@ -153,6 +153,125 @@ export const Experience = () => {
         </div>
       </Card>
 
+      {/* Freelance Role */}
+      <Card className="p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 bg-card/80 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 sm:mb-6">
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+              Full Stack Developer
+            </h3>
+            <div className="flex items-center text-primary font-semibold mb-2">
+              <span>Forethought India</span>
+              <Badge variant="secondary" className="bg-accent text-accent-foreground ml-2">
+                Freelance
+              </Badge>
+            </div>
+            <div className="flex flex-col xs:flex-row xs:items-center gap-2 xs:gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center">
+                <Calendar className="w-4 h-4 mr-1 flex-shrink-0" />
+                <span>Dec 2022 - Mar 2023</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
+                <span>Remote</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-6 sm:mb-8">
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Technologies Used</h4>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="text-xs">TypeScript</Badge>
+            <Badge variant="outline" className="text-xs">LESS</Badge>
+            <Badge variant="outline" className="text-xs">Node.js</Badge>
+            <Badge variant="outline" className="text-xs">MongoDB</Badge>
+            <Badge variant="outline" className="text-xs">Email Automation</Badge>
+            <Badge variant="outline" className="text-xs">Data Extraction</Badge>
+          </div>
+        </div>
+
+        <div className="mb-6 sm:mb-8">
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Key Achievements</h4>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Developed custom email solution for automating and extracting data, handling full project lifecycle from design to deployment.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Designed responsive UI with intuitive forms and dashboard for seamless data input and visualization.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Built scalable backend using Node.js and MongoDB, capable of handling large amounts of data with reliable service delivery.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Integrated various APIs for seamless data extraction and automated email processing workflows.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Collaborated closely with client throughout development process, ensuring requirements alignment and successful delivery.
+              </p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="p-1 bg-gradient-primary rounded-full flex-shrink-0 mt-1">
+                <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Deployed production-ready solution with optimized performance and stability on client servers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Key Projects</h4>
+          <div className="space-y-3 sm:space-y-4">
+            <Card 
+              className="p-3 sm:p-4 bg-secondary/50 border-secondary"
+              onMouseEnter={() => handleProjectView("Custom Email Automation Platform", "Forethought India")}
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div className="mb-3 md:mb-0 flex-1 min-w-0">
+                  <h5 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Custom Email Automation Platform</h5>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-2">Full-stack email solution with automated data extraction, responsive dashboard, and API integrations.</p>
+                  <div className="flex flex-wrap gap-1 sm:gap-2">
+                    <Badge variant="outline" className="text-xs">TypeScript</Badge>
+                    <Badge variant="outline" className="text-xs">LESS</Badge>
+                    <Badge variant="outline" className="text-xs">Node.js</Badge>
+                    <Badge variant="outline" className="text-xs">MongoDB</Badge>
+                  </div>
+                </div>
+                <div className="text-left md:text-right mt-2 md:mt-0">
+                  <div className="text-xs sm:text-sm font-medium text-accent">Streamlined client operations</div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </Card>
+
       <Card className="p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 bg-card/80 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 sm:mb-6">
           <div>
