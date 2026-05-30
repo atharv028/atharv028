@@ -1,7 +1,6 @@
-## नमस्ते 🙏
-[![](https://img.shields.io/badge/LinkedIn-ayushkumar25-blue?logo=Linkedin&logoColor=blue&labelColor=black)](https://www.linkedin.com/in/atharv-tare/)
-[![](https://img.shields.io/badge/Gmail-ayush2608%40gmail.com-red?logo=Gmail&logoColor=Red&labelColor=black)](mailto:hire.atharv@gmail.com)
-[![](https://img.shields.io/badge/Telegram-ayushkumar25-blue?logo=Telegram&labelColor=black)](https://t.me/atharv_tare0)
+## नमस्ते (Namaste) 🙏
+[![](https://img.shields.io/badge/LinkedIn-AtharvTare-blue?logo=Linkedin&logoColor=blue&labelColor=black)](https://www.linkedin.com/in/atharv-tare/)
+[![](https://img.shields.io/badge/Gmail-hire.atharv%40gmail.com-red?logo=Gmail&logoColor=Red&labelColor=black)](mailto:hire.atharv@gmail.com)
 
 ![](https://github.com/atharv028/atharv028/blob/master/aboutMe.png)
 
