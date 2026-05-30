@@ -1,12 +1,12 @@
-### Hello there 👋
+## नमस्ते 🙏
+[![](https://img.shields.io/badge/LinkedIn-ayushkumar25-blue?logo=Linkedin&logoColor=blue&labelColor=black)](https://www.linkedin.com/in/atharv-tare/)
+[![](https://img.shields.io/badge/Gmail-ayush2608%40gmail.com-red?logo=Gmail&logoColor=Red&labelColor=black)](mailto:hire.atharv@gmail.com)
+[![](https://img.shields.io/badge/Telegram-ayushkumar25-blue?logo=Telegram&labelColor=black)](https://t.me/atharv_tare0)
 
-#### A Full-Stack Developer by day ☼ and a Problem Solver by night ☾
+![](https://github.com/atharv028/atharv028/blob/master/aboutMe.png)
 
-Software Engineer at [Appyhigh](https://appyhigh.com);<br>
-Handling 5m+ users on [Phot.AI](https://phot.ai);<br>
+## About Me:
+#### I am a pragmatic problem-solver who hates wasted resources and unnecessary chaos, finding deep satisfaction in building quiet, resilient foundations that let everyone else sleep soundly at night. <br> 
 
--  https://atharv.work
-- 👔 Available for new opportunities.
-- ⚙️ I use daily: `.js`, `.ts`, `.go`, `dockerfile`, `AWS`, `.tf`, `.sh`, `.ai`
-- 💅 Designed: [Phot.AI](https://phot.ai), [Studio](https://studio.phot.ai), etc…
-- 💬 `ping` me about **architecture**, **automation**, **javascript**, **go**, **databases**
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
